@@ -1,0 +1,113 @@
+.flower {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    transform: rotate(-20deg);
+    scale: 0.7;
+  }
+  
+  .petal {
+    position: absolute;
+    width: 40px;
+    height: 130px;
+    background: linear-gradient(to bottom, rgb(255, 233, 37), rgba(224, 190, 78, 0.308));
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 10px 10px 200px 1px rgba(255, 230, 0, 0.63);
+  }
+  
+  .petal1 { transform: rotate(0deg); top: 0; left: 60px; }
+  .petal2 { transform: rotate(45deg); top: 30px; left: 110px; }
+  .petal3 { transform: rotate(90deg); top: 80px; left: 140px; }
+  .petal4 { transform: rotate(135deg); top: 130px; left: 110px; }
+  .petal5 { transform: rotate(180deg); top: 160px; left: 60px; }
+  .petal6 { transform: rotate(225deg); top: 130px; left: 10px; }
+  .petal7 { transform: rotate(270deg); top: 80px; left: -20px; }
+  .petal8 { transform: rotate(315deg); top: 30px; left: 10px; }
+  
+  .center {
+    position: absolute;
+    top: 125px;
+    left: 60px;
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgba(107, 4, 1, 0.774) 100%);
+    border-radius: 50%;
+  }
+  
+  .leaf-left {
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    border-radius: 0 100px;
+    background: linear-gradient(to bottom, rgba(1, 90, 1, 1), rgba(1, 90, 1, 0.5));
+    transform: rotate(0deg);
+    top: 230px;
+    left: -100px;
+    scale: 0.7;
+  }
+  
+  .leaf-right {
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    border-radius: 0 100px;
+    background: linear-gradient(to bottom, rgba(1, 90, 1, 1), rgba(1, 90, 1, 0.5));
+    transform: rotate(130deg);
+    top: 300px;
+    left: -20px;
+    scale: 0.7;
+  }
+  
+  .stalk {
+    position: absolute;
+    top: 160px; /* Adjust as necessary to position the stalk correctly */
+    left: -46px; /* Adjust as necessary to center the stalk */
+    transform: rotate(20deg);
+  }
+  
+  .flower-stalk {
+    position: absolute;
+    top: -10px; /* Adjust as necessary to position the stalk correctly */
+    left: -40px; /* Adjust as necessary to center the stalk */
+    transform: rotate(-10deg);
+  }
+  
+  @keyframes particle {
+    0% {
+      opacity: 1;
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(var(--translate-x), var(--translate-y)) scale(0);
+    }
+  }
+  
+  .petal .particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 233, 37, 0.8);
+    border-radius: 50%;
+    animation: particle 4s infinite ease-out;
+  }
+  
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    color: rgb(252, 115, 138);
+    animation: heartAnimation 2s ease-out forwards;
+  }
+  
+  @keyframes heartAnimation {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-50%, -300%) scale(0);
+      opacity: 0;
+    }
+  }
+  
