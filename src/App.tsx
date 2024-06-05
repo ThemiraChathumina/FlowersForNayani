@@ -9,12 +9,6 @@ function App() {
       <div className="flower-container-1">
         <Flower />
       </div>
-      <div className="flower-container-2">
-        <Flower />
-      </div>
-      <div className="flower-container-3">
-        <Flower />
-      </div>
     </div>
   );
 }
